@@ -30,6 +30,7 @@ augroup END
 " coming home to vim -----------------------------
 filetype off
 "pathogen
+call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
@@ -90,3 +91,10 @@ set mouse=a
 set history=1000
 "colorscheme Tomorrow-Night
 "colorscheme wombat
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
+" syntax highlighting
+color mango
+set background=dark     " you can use `dark` or `light` as your background
