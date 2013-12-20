@@ -50,7 +50,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-"set cursorline
+set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -75,7 +75,7 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+"set colorcolumn=85
 "no help
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -92,9 +92,6 @@ set history=1000
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
-
 " syntax highlighting
 set background=dark
-" color wombat
-" color mango
 colorscheme desert
