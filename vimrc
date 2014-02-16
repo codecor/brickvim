@@ -50,7 +50,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
+"set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -95,3 +95,4 @@ let g:html_indent_style1 = "inc"
 " syntax highlighting
 set background=dark
 colorscheme desert
+let javascript_enable_domhtmlcss=1
