@@ -27,7 +27,7 @@ cp vimrc ~/.vimrc
 # bundle pkgs
 if cd ~/.vim/bundle
 then
-    for pos in "https://bitbucket.org/kotarak/vimclojure" \
+    for pos in "https://github.com/vim-scripts/VimClojure.git" \
         "https://github.com/chrisbra/NrrwRgn.git" \
         "https://github.com/fugalh/desert.vim.git" \
         "https://github.com/kien/ctrlp.vim.git" \
@@ -43,11 +43,11 @@ then
         "https://github.com/garbas/vim-snipmate.git" \
         "https://github.com/terryma/vim-multiple-cursors.git" \
         "https://github.com/honza/vim-snippets.git" \
-        "https://github.com/tpope/vim-surround.git" \
-    do
-        git clone $pos
-    done
-    cd $WRK
+        "https://github.com/tpope/vim-surround.git"
+do
+    git clone $pos
+done
+cd $WRK
 fi
 
 # messages
