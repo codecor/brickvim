@@ -1,5 +1,5 @@
 #!/bin/bash
-# keep vim color scheme in screen
+# keep me vim 
 #
 # members
 BUNDLE="~/.vim/bundle"
@@ -14,8 +14,10 @@ if ! grep "xterm-256color" ~/.bashrc > /dev/null 2>&1; then
 fi
 
 # initiate or overlay
-if  ! cp -rp vim/* ~/.vim/ 
+if [[ -d "~/.vim" ]]
 then
+    cp -rp vim/* ~/.vim/
+else
     echo "creating"
     cp -rp vim ~/.vim
 fi
@@ -28,9 +30,10 @@ then
 fi
 
 # overlay rc file
-if uname -a | grep debian
+if uname -a | grep -i debian > /dev/null 2>&1
 then
-    sed s/archlinux/debian/g vimrc 
+    sed -i.bak s/archlinux/debian/g vimrc 
+    echo runtime set to debian
 else
     echo runtime set to archlinux
 fi
