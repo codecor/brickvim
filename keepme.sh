@@ -21,7 +21,12 @@ then
 fi
 
 # overlay rc file
-# TODO debian vs. arch line handling
+if uname -a | grep debian
+then
+    sed s/archlinux/debian/g vimrc 
+else
+    echo runtime set to archlinux
+fi
 cp vimrc ~/.vimrc
 
 # bundle pkgs
