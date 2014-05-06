@@ -20,6 +20,13 @@ then
     cp -rp vim ~/.vim
 fi
 
+# plugin placeholder
+if ! mkdir ~/.vim/bundle
+then
+    echo "fatal: unable to create bundle dir"
+    exit 1
+fi
+
 # overlay rc file
 if uname -a | grep debian
 then
