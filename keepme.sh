@@ -67,6 +67,7 @@ then
         "https://github.com/kchmck/vim-coffee-script" \
         "https://github.com/airblade/vim-gitgutter" \
         "https://github.com/esneider/YUNOcommit.vim.git" \
+        "https://github.com/vim-scripts/BusyBee.git" \
         "https://github.com/tpope/vim-surround.git"
 do
     git clone $pos
