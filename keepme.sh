@@ -73,6 +73,7 @@ do
     git clone $pos
 done
 cd $WRK
+cp BusyBee.vim ~/.vim/bundle/BusyBee/colors/
 fi
 
 # messages
