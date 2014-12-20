@@ -14,12 +14,10 @@ if ! grep "xterm-256color" ~/.bashrc > /dev/null 2>&1; then
 fi
 
 # initiate or overlay
-if [[ -d "~/.vim" ]]
+if ! mkdir ~/.vim/
 then
-    cp -rp vim/* ~/.vim/
-else
-    echo "creating"
-    cp -rp vim ~/.vim
+    echo "fatal: unable to create vim dir"
+    exit 1
 fi
 
 # plugin placeholder
@@ -28,6 +26,14 @@ then
     echo "fatal: unable to create bundle dir"
     exit 1
 fi
+
+if ! mkdir ~/.vim/autoload
+then
+    echo "fatal: unable to create autoload dir"
+    exit 1
+fi
+
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # overlay rc file
 if uname -a | grep -i debian > /dev/null 2>&1
