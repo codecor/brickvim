@@ -6,11 +6,14 @@ BUNDLE="~/.vim/bundle"
 WRK=$(pwd)
 #
 # colors for screen
+#TODO dont write to a file that doesn't previously exist
 if ! grep "screen-256color" ~/.screenrc > /dev/null 2>&1; then
     echo "term screen-256color" >> ~/.screenrc
+    echo "term screen-256color" >> ~/.tmux.conf
 fi
 if ! grep "xterm-256color" ~/.bashrc > /dev/null 2>&1; then
     echo "export TERM=xterm-256color" >> ~/.bashrc
+    echo "export TERM=xterm-256color" >> ~/.zshrc
 fi
 
 # initiate or overlay
