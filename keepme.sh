@@ -7,13 +7,13 @@ WRK=$(pwd)
 #
 # colors for screen
 #TODO dont write to a file that doesn't previously exist
-if ! grep "screen-256color" ~/.screenrc > /dev/null 2>&1; then
-    echo "term screen-256color" >> ~/.screenrc
-    echo "term screen-256color" >> ~/.tmux.conf
+vterm="~/.tmux.conf"
+if ! grep "256color" $vterm > /dev/null 2>&1; then
+    echo "set -g default-terminal "screen-256color"" >> $vterm
 fi
-if ! grep "xterm-256color" ~/.bashrc > /dev/null 2>&1; then
-    echo "export TERM=xterm-256color" >> ~/.bashrc
-    echo "export TERM=xterm-256color" >> ~/.zshrc
+my_shell="~/.zshrc"
+if ! grep "256color" $my_shell > /dev/null 2>&1; then
+    echo "export TERM=screen-256color" >> $my_shell
 fi
 
 # initiate or overlay
