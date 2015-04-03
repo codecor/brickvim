@@ -13,7 +13,7 @@ if ! grep "256color" $vterm > /dev/null 2>&1; then
 fi
 my_shell="~/.zshrc"
 if ! grep "256color" $my_shell > /dev/null 2>&1; then
-    echo "export TERM=screen-256color" >> $my_shell
+    echo "export TERM=xterm-256color" >> $my_shell
 fi
 
 # initiate or overlay
