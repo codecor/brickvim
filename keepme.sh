@@ -54,7 +54,8 @@ then
     for pos in "https://github.com/vim-scripts/VimClojure.git" \
         "https://github.com/chrisbra/NrrwRgn.git" \
         "https://github.com/fugalh/desert.vim.git" \
-        "https://github.com/kien/ctrlp.vim.git" \
+        #"https://github.com/kien/ctrlp.vim.git" \
+        "https://github.com/ctrlpvim/ctrlp.vim.git" \
         "https://github.com/mileszs/ack.vim.git" \
         "https://github.com/scrooloose/syntastic.git" \
         "https://github.com/ervandew/supertab.git" \
