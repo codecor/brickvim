@@ -7,13 +7,12 @@ WRK=$(pwd)
 #
 # colors for screen
 #TODO dont write to a file that doesn't previously exist
-vterm="~/.tmux.conf"
-if ! grep "256color" $vterm > /dev/null 2>&1; then
-    echo "set -g default-terminal "screen-256color"" >> $vterm
-fi
 my_shell="~/.zshrc"
 if ! grep "256color" $my_shell > /dev/null 2>&1; then
     echo "export TERM=xterm-256color" >> $my_shell
+    echo "alias lss="ls -ltr" >> $my_shell
+    echo "alias s="git status" >> $my_shell
+    echo "alias p="git push origin master" >> $my_shell
 fi
 
 # initiate or overlay
@@ -54,7 +53,6 @@ then
     for pos in "https://github.com/vim-scripts/VimClojure.git" \
         "https://github.com/chrisbra/NrrwRgn.git" \
         "https://github.com/fugalh/desert.vim.git" \
-        #"https://github.com/kien/ctrlp.vim.git" \
         "https://github.com/ctrlpvim/ctrlp.vim.git" \
         "https://github.com/mileszs/ack.vim.git" \
         "https://github.com/scrooloose/syntastic.git" \
