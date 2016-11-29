@@ -7,13 +7,12 @@ WRK=$(pwd)
 #
 # colors for screen
 #TODO dont write to a file that doesn't previously exist
-my_shell="~/.zshrc"
-my_shell="/root/.zshrc"
+homedir=~
+eval homedir=$homedir
+my_shell="${homedir}/.zshrc"
 if ! grep "256color" $my_shell > /dev/null 2>&1; then
     echo "export TERM=xterm-256color" >> $my_shell
     echo "alias lss='ls -ltr'" >> $my_shell
-    echo "alias s='git status'" >> $my_shell
-    echo "alias p='git push origin master'" >> $my_shell
 fi
 
 # initiate or overlay
@@ -51,23 +50,18 @@ cp vimrc ~/.vimrc
 # bundle pkgs
 if cd ~/.vim/bundle
 then
-    for pos in "https://github.com/vim-scripts/VimClojure.git" \
-        "https://github.com/chrisbra/NrrwRgn.git" \
-        "https://github.com/fugalh/desert.vim.git" \
+    for pos in "https://github.com/chrisbra/NrrwRgn.git" \
         "https://github.com/ctrlpvim/ctrlp.vim.git" \
-        "https://github.com/mileszs/ack.vim.git" \
         "https://github.com/scrooloose/syntastic.git" \
         "https://github.com/ervandew/supertab.git" \
         "https://github.com/spolu/dwm.vim.git" \
-        "https://github.com/pangloss/vim-javascript.git" \
-        "https://github.com/tpope/vim-fugitive.git" \
+	    "https://github.com/mileszs/ack.vim.git" \
         "https://github.com/MarcWeber/vim-addon-mw-utils.git" \
         "https://github.com/tomtom/tlib_vim.git" \
         "https://github.com/plasticboy/vim-markdown.git" \
         "https://github.com/garbas/vim-snipmate.git" \
         "https://github.com/terryma/vim-multiple-cursors.git" \
         "https://github.com/honza/vim-snippets.git" \
-        "https://github.com/kchmck/vim-coffee-script" \
         "https://github.com/airblade/vim-gitgutter" \
         "https://github.com/esneider/YUNOcommit.vim.git" \
         "https://github.com/vim-scripts/BusyBee.git" \
