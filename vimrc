@@ -14,7 +14,6 @@ runtime! archlinux.vim
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
-
 function! ResCur()
   if line("'\"") <= line("$")
     normal! g`"
@@ -30,7 +29,6 @@ augroup END
 " coming home to vim -----------------------------
 filetype off
 "pathogen
-"call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
@@ -88,7 +86,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 set mouse=a
 "set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-set history=1000
+set history=2000
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
@@ -106,4 +104,4 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 " YUNOcommit
-let g:YUNOcommit_after = 5
+let g:YUNOcommit_after = 10
