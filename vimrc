@@ -105,3 +105,14 @@ let g:multi_cursor_quit_key='<Esc>'
 
 " YUNOcommit
 let g:YUNOcommit_after = 10
+
+" vim lexical
+filetype plugin on 
+augroup lexical
+    autocmd!
+    autocmd FileType markdown,mkd call lexical#init()
+    autocmd FileType textile call lexical#init()
+    autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
+let g:lexical#spell = 1         " 0=disabled, 1=enabled
+" ---
