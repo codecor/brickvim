@@ -13,6 +13,9 @@ my_shell="${homedir}/.zshrc"
 if ! grep "256color" $my_shell > /dev/null 2>&1; then
     echo "export TERM=xterm-256color" >> $my_shell
     echo "alias lss='ls -ltr'" >> $my_shell
+    echo "alias s='git status'" >> $my_shell
+    echo "alias P='git pull origin master'" >> $my_shell
+    echo "alias p='git push origin master'" >> $my_shell
 fi
 
 # initiate or overlay
